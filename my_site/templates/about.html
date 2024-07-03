@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Sobre - Dev Insight & Articles{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h1>Responsável</h1>
+        <p>
+            Dev Insights & Articles, desenvolvido por Glauber Marques em julho de 2024, é um portal dedicado a artigos colaborativos focados em tecnologia e desenvolvimento. Profissionais experientes do mercado contribuem com conteúdos atualizados e relevantes, cobrindo uma ampla gama de tópicos como programação, inteligência artificial, cibersegurança, desenvolvimento web e mobile, além de novas tendências tecnológicas. O objetivo principal é criar um ambiente de aprendizado contínuo e troca de conhecimentos, onde desenvolvedores e entusiastas da tecnologia possam se atualizar, compartilhar experiências e colaborar em projetos inovadores. A plataforma também oferece tutoriais, estudos de caso, análises de ferramentas e frameworks, e entrevistas com especialistas da indústria. Dessa forma, a página se posiciona como uma referência essencial para aqueles que buscam se manter à frente no dinâmico mundo da tecnologia e desenvolvimento.
+        </p>
+    </div>
+    <div class="col-md-4 text-center">
+        <img src="{{ url_for('static', filename='img/glauber.jpeg') }}" class="img-fluid rounded mb-3" alt="Imagem sobre nós"style="width: 150px; height: auto;">
+        <h4 style="font-size: 0.9rem; color: #333;">Glauber Marques</h4>
+        <h5 style="font-size: 0.6rem; color: #333;">Data Analytics|RPA</h5>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Home - My Site{% endblock %}
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Dev Insights & Articles!</h1>
+    <p class="lead">Aqui você encontra artigos sobre Análise de Dados e RPA.</p>
+    <hr class="my-4">
+    <p>Explore nossos conteúdos e fique atualizado com as últimas tendências.</p>
+    <a class="btn btn-primary btn-lg" href="/about" role="button">Saiba mais</a>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <h2>Análise de Dados</h2>
+        <p>Confira os artigos mais recentes sobre Análise de Dados.</p>
+        <a class="btn btn-secondary" href="/analysis">Ver mais</a>
+    </div>
+    <div class="col-md-6">
+        <h2>RPA</h2>
+        <p>Explore as últimas novidades em Automação de Processos Robóticos.</p>
+        <a class="btn btn-secondary" href="/rpa">Ver mais</a>
+    </div>
+</div>
+{% endblock %}
