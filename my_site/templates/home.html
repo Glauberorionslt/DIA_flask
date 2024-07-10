@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 {% block title %}Home - My Site{% endblock %}
 {% block content %}
-<div class="jumbotron">
-    <h1 class="display-4">Dev Insights & Articles!</h1>
-    <p class="lead">Aqui você encontra artigos sobre Análise de Dados e RPA.</p>
-    <hr class="my-4">
-    <p>Explore nossos conteúdos e fique atualizado com as últimas tendências.</p>
-    <a class="btn btn-primary btn-lg" href="/about" role="button">Saiba mais</a>
+<div class="jumbotron" style="background-image: url('/static/img/Apresentação1.jpg');">
+    <div class="container">
+        <h1 class="display-4 text-white">Dev Insights & Articles!</h1>
+        <p class="lead text-white">Aqui você encontra artigos sobre Análise de Dados e RPA.</p>
+        <hr class="my-4">
+        <p class="text-white">Explore nossos conteúdos e fique atualizado com as últimas tendências.</p>
+        <!-- Change the link here -->
+        <a class="btn btn-primary btn-lg" href="/analysis" role="button">Saiba mais</a>
+    </div>
 </div>
 <div class="row">
     <div class="col-md-6">

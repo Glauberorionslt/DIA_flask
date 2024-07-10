@@ -29,18 +29,18 @@ def home():
 @app.route('/analysis')
 def analysis():
     articles = [
-        {"id": 1, "title": "Introdução à Análise de Dados", "description": "Aprenda os conceitos básicos de análise de dados.", "image": "\static\img\capa_card_subject\intro_ANL_D.jpg"},
-        {"id": 2, "title": "Ferramentas de Análise de Dados", "description": "Uma visão geral das ferramentas mais usadas.", "image": "https://via.placeholder.com/300x200"},
-        {"id": 3, "title": "Técnicas Avançadas de Análise", "description": "Explore técnicas avançadas de análise de dados.", "image": "https://via.placeholder.com/300x200"},
+        {"id": 1, "title": "Introdução à Análise de Dados", "description": "Aprenda os conceitos básicos de análise de dados.", "image": "\static\img\capa_card_subject\ANALISE DE DADOS\DATA_ANALYSIS.jpg"},
+        {"id": 2, "title": "Ferramentas de Análise de Dados", "description": "Uma visão geral das ferramentas mais usadas.", "image": "\static\img\capa_card_subject\ANALISE DE DADOS\DATA_ANALYSIS.jpg"},
+        {"id": 3, "title": "Técnicas Avançadas de Análise", "description": "Explore técnicas avançadas de análise de dados.", "image": "\static\img\capa_card_subject\ANALISE DE DADOS\DATA_ANALYSIS.jpg"},
     ]
     return render_template('category.html', category="Análise de Dados", articles=articles)
 
 @app.route('/rpa')
 def rpa():
     articles = [
-        {"id": 1, "title": "Introdução ao RPA", "description": "Conheça os conceitos básicos de RPA.", "image": "https://via.placeholder.com/300x200"},
-        {"id": 2, "title": "Ferramentas de RPA", "description": "Veja as ferramentas mais utilizadas no mercado.", "image": "https://via.placeholder.com/300x200"},
-        {"id": 3, "title": "Implementação de RPA", "description": "Saiba como implementar RPA na sua empresa.", "image": "https://via.placeholder.com/300x200"},
+        {"id": 4, "title": "Introdução ao RPA", "description": "Conheça os conceitos básicos de RPA.", "image": "\static\img\capa_card_subject\RPA\RPA.jpeg"},
+        {"id": 5, "title": "Ferramentas de RPA", "description": "Veja as ferramentas mais utilizadas no mercado.", "image": "\static\img\capa_card_subject\RPA\RPA.jpeg"},
+        {"id": 6, "title": "Implementação de RPA", "description": "Saiba como implementar RPA na sua empresa.", "image": "\static\img\capa_card_subject\RPA\RPA.jpeg"},
     ]
     return render_template('category.html', category="RPA", articles=articles)
 
