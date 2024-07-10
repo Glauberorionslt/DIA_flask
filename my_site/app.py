@@ -1,6 +1,7 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 import os
 import json
+
 
 app = Flask(__name__)
 
@@ -60,6 +61,32 @@ def about():
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
+
+@app.route('/all_articles')
+def all_articles():
+    articles = [
+        {"id": 1, "title": "Introdução à Análise de Dados", "description": "Aprenda os conceitos básicos de análise de dados.", "image": "/static/img/capa_card_subject/ANALISE DE DADOS/DATA_ANALYSIS.jpg"},
+        {"id": 2, "title": "Ferramentas de Análise de Dados", "description": "Uma visão geral das ferramentas mais usadas.", "image": "/static/img/capa_card_subject/ANALISE DE DADOS/DATA_ANALYSIS.jpg"},
+        {"id": 3, "title": "Técnicas Avançadas de Análise", "description": "Explore técnicas avançadas de análise de dados.", "image": "/static/img/capa_card_subject/ANALISE DE DADOS/DATA_ANALYSIS.jpg"},
+        {"id": 4, "title": "Introdução ao RPA", "description": "Conheça os conceitos básicos de RPA.", "image": "/static/img/capa_card_subject/RPA/RPA.jpeg"},
+        {"id": 5, "title": "Ferramentas de RPA", "description": "Veja as ferramentas mais utilizadas no mercado.", "image": "/static/img/capa_card_subject/RPA/RPA.jpeg"},
+        {"id": 6, "title": "Implementação de RPA", "description": "Saiba como implementar RPA na sua empresa.", "image": "/static/img/capa_card_subject/RPA/RPA.jpeg"},
+    ]
+    return render_template('all_articles.html', articles=articles)
+
+# Rota para processar a pesquisa
+@app.route('/search')
+def search():
+    query = request.args.get('q', '').lower()
+    articles = load_articles()
+    filtered_articles = [article for article in articles if query in article['title'].lower()]
+    return render_template('all_articles.html', articles=filtered_articles)
+
+# Nova rota para a página "Contrate Freelancer"
+@app.route('/contrate_freelancer')
+def contrate_freelancer():
+    return render_template('contrate_freelancer.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,0 +1,28 @@
+.jumbotron-bg {
+    background: url('/static/img/Apresentação1.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: .3rem;
+    position: relative;
+}
+
+.jumbotron-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adiciona uma camada escura sobre a imagem para melhorar a legibilidade do texto */
+    border-radius: .3rem;
+}
+
+.jumbotron-bg h1,
+.jumbotron-bg p,
+.jumbotron-bg a {
+    position: relative;
+    z-index: 1;
+}

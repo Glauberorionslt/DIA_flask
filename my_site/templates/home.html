@@ -1,3 +1,4 @@
+<!-- templates/home.html -->
 {% extends 'base.html' %}
 {% block title %}Home - My Site{% endblock %}
 {% block content %}
@@ -7,8 +8,7 @@
         <p class="lead text-white">Aqui você encontra artigos sobre Análise de Dados e RPA.</p>
         <hr class="my-4">
         <p class="text-white">Explore nossos conteúdos e fique atualizado com as últimas tendências.</p>
-        <!-- Change the link here -->
-        <a class="btn btn-primary btn-lg" href="/analysis" role="button">Saiba mais</a>
+        <a class="btn btn-primary btn-lg" href="/all_articles" role="button">Saiba mais</a>
     </div>
 </div>
 <div class="row">
@@ -21,6 +21,13 @@
         <h2>RPA</h2>
         <p>Explore as últimas novidades em Automação de Processos Robóticos.</p>
         <a class="btn btn-secondary" href="/rpa">Ver mais</a>
+    </div>
+</div>
+<div class="row mt-4">
+    <div class="col-md-12">
+        <h2>Contrate Freelancer</h2>
+        <p>Conheça meus serviços como freelancer especializado em dados.</p>
+        <a class="btn btn-primary" href="/contrate_freelancer">Saiba mais</a>
     </div>
 </div>
 {% endblock %}
